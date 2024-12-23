@@ -131,6 +131,21 @@ You will be evaluated on the following points:
 
 ---
 
+## **Functionality Updates After Assignment
+<img width="1438" alt="000004" src="https://github.com/user-attachments/assets/0d32e107-1976-485e-aaca-4eb50f65eba2" />
+
+
+<img width="438" alt="+ Add Timer" src="https://github.com/user-attachments/assets/3ea0db98-c5c3-4204-97d1-377025f2424b" />
+
+<img width="437" alt="Dismiss" src="https://github.com/user-attachments/assets/1c2df6ac-5533-434e-a53f-180309fce532" />
+
+## unit tests
+
+ <img width="1002" alt="Pasted Graphic 1" src="https://github.com/user-attachments/assets/18ae27ca-cbfc-4876-b5a8-193e1905b59d" />
+
+<img width="852" alt="Pasted Graphic" src="https://github.com/user-attachments/assets/0148a0bf-b54a-4b3b-917c-357d60c7df90" />
+
+
 ## **Time Constraint**
 
 You are expected to complete this assignment in **4 hours** of focused effort.  
