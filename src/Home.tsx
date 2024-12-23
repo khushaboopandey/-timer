@@ -4,6 +4,7 @@ import { TimerList } from "./components/TimerList";
 import { Toaster } from "sonner";
 import { TimerModal } from "./components/TimerModal";
 import { useTimerStore } from "./store/useTimerStore";
+import { APP_NAME, ADD_TIMER } from "./utils/constants";
 
 function Home() {
   const { addTimer } = useTimerStore();
@@ -18,7 +19,7 @@ function Home() {
           {/* Timer Title */}
           <div className="flex items-center gap-3">
             <Clock className="w-8 h-8 text-blue-600" />
-            <h1 className="text-3xl font-bold text-gray-900">Timer</h1>
+            <h1 className="text-3xl font-bold text-gray-900">{APP_NAME}</h1>
           </div>
 
           {/* Add Timer Button */}
@@ -27,7 +28,7 @@ function Home() {
             className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors shadow-md hover:shadow-lg"
           >
             <Plus className="w-5 h-5" />
-            Add Timer
+            {ADD_TIMER}
           </button>
         </div>
 

@@ -2,6 +2,16 @@ import React, { useState, useEffect } from "react";
 import { X } from "lucide-react";
 import { ModalButtons } from "./ModalButtons";
 import { toast } from "sonner";
+import {
+  SAVE_CHANGES,
+  ADD_TIMER,
+  DESC,
+  TITLE,
+  TITLE_IS_REQUIRED,
+  DURATION_MUST_BE_GREATER_THAN_ZERO,
+  ADD_NEW_TIMER,
+  EDIT_TIMER,
+} from "../utils/constants";
 
 interface TimerModalProps {
   isOpen: boolean;
@@ -68,11 +78,11 @@ export const TimerModal: React.FC<TimerModalProps> = ({
     const totalSeconds = hours * 3600 + minutes * 60 + seconds;
 
     if (!title.trim()) {
-      toast.error("Title is required.");
+      toast.error(TITLE_IS_REQUIRED);
       return;
     }
     if (totalSeconds <= 0) {
-      toast.error("Duration must be greater than 0.");
+      toast.error(DURATION_MUST_BE_GREATER_THAN_ZERO);
       return;
     }
 
@@ -95,7 +105,7 @@ export const TimerModal: React.FC<TimerModalProps> = ({
       <div className="bg-white rounded-lg p-6 w-full max-w-md shadow-xl">
         <div className="flex justify-between items-center mb-6">
           <h2 className="text-xl font-semibold">
-            {mode === "edit" ? "Edit Timer" : "Add Timer"}
+            {mode === "edit" ? EDIT_TIMER : ADD_NEW_TIMER}
           </h2>
           <button
             onClick={onClose}
@@ -109,7 +119,7 @@ export const TimerModal: React.FC<TimerModalProps> = ({
           {/* Title Input */}
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-1">
-              Title <span className="text-red-500">*</span>
+              {TITLE} <span className="text-red-500">*</span>
             </label>
             <input
               type="text"
@@ -123,7 +133,7 @@ export const TimerModal: React.FC<TimerModalProps> = ({
           {/* Description Input (Optional) */}
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-1">
-              Description
+              {DESC}
             </label>
             <textarea
               value={description}
@@ -176,7 +186,7 @@ export const TimerModal: React.FC<TimerModalProps> = ({
           {/* Modal Buttons */}
           <ModalButtons
             onCancel={onClose}
-            submitText={mode === "edit" ? "Save Changes" : "Add Timer"}
+            submitText={mode === "edit" ? SAVE_CHANGES : ADD_TIMER}
           />
         </form>
       </div>
